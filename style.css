@@ -28,6 +28,10 @@ body {
   position: relative;
 }
 
+.panel-desktop {
+  display: none;
+}
+
 .close-icon {
   position: absolute;
   right: 15px;
@@ -39,24 +43,30 @@ body {
   text-align: center;
 }
 
-.confirmation-img {
+.panel-top-img {
   display: block;
   margin: auto;
   margin-top: 45px;
+  width: 25%;
 }
 
 h2 {
   color: #2f463d;
   font-size: 22px;
   font-weight: 600;
+  height: 50px;
 }
 
-.confirmation-text {
+.content-text {
   font-family: "Ubuntu", sans-serif;
   padding-top: 10px;
   color: #828282;
   line-height: 26px;
   font-size: 14px;
+}
+
+.spaced-content {
+  margin-top: 30px;
 }
 
 .order {
@@ -84,18 +94,17 @@ h2 {
   font-weight: 500;
 }
 
-.change-button {
+.change-btn {
   font-size: 13px;
   font-weight: 700;
   color: #467a66;
   padding-right: 10px;
 }
 
-.confirmation-button {
+.panel-btn {
   color: white;
   font-size: 15px;
   font-weight: 800;
-  background-color: #46a67e;
   border-radius: 5px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
@@ -107,7 +116,17 @@ h2 {
   transition: 0.3s ease all;
 }
 
-.confirmation-button:hover {
+.panel-btn-active {
+  background-color: #46a67e;
+}
+
+.panel-btn-disabled {
+  background-color: #bdbdbd;
+  box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+  margin-top: 50px;
+}
+
+.panel-btn:hover {
   opacity: 0.8;
   transition: 0.3s ease all;
   cursor: pointer;
@@ -127,6 +146,22 @@ h2 {
   margin: 0 10px;
 }
 
-.circle:nth-of-type(2) {
+.circle-green {
   background-color: #67bd99;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    justify-content: space-around;
+  }
+
+  .panel {
+    width: 450px;
+    max-width: 500px;
+    margin: 10px;
+  }
+
+  .panel-desktop {
+    display: block;
+  }
 }
